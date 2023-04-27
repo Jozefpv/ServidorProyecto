@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500&display=swap');
+
+.test {
+  display: block;
+  width: 400px;
+  border-radius: 10px;
+  height: 300px;
+}
+
+.containerApartment{
+  font-family: 'Maven Pro', sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+  transition: transform .2s;
+}
+
+.containerApartment:hover {
+  transform: scale(1.05);
+}
