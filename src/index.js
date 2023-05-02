@@ -2,11 +2,14 @@ require('./database')
 const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
+const bodyParse = require("body-parser")
 const app = express()
 
 //Settings
 app.set('port', process.env.PORT || 3003)
 
+app.use(bodyParse.urlencoded({extended:true}))
+app.use(bodyParse.json())
 //middlewares
 app.use(morgan('dev'))
 app.use(express.json())

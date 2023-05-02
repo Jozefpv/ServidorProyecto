@@ -5,7 +5,7 @@ const moment = require('moment');
 
 router.get('/', async (req, res) => {
     const apartamentos = await Apartamento.find()
-    res.json(apartamentos)
+    res.json(apartamentos).send({msg: "hola"})
 })
 
 router.get('/apartamentos/:id', async (req, res) => {
