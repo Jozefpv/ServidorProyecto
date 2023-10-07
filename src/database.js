@@ -1,9 +1,7 @@
 const mongoose = require('mongoose')
+const dotenv= require('dotenv').config() 
 
-const URI = 'mongodb+srv://jozef:jozef@cluster0.trrjhin.mongodb.net/apartamentosDB?retryWrites=true&w=majority'
-
-mongoose.connect(URI)
-
+mongoose.connect(process.env.MONGO_URL);
 mongoose.connection.on('open', () =>{ 
     console.log('Basa de datos conectada')
 })
